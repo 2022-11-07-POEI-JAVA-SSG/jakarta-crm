@@ -5,6 +5,7 @@ import com.poe20221107.crm.dao.ClientDAO;
 import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -16,5 +17,13 @@ public class CrmApi {
     public List<Client> getClients(){
         
         return ClientDAO.findAll();
+    }
+    
+    @GET()
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Client getClient(@PathParam("id") Long id){
+        
+        return ClientDAO.findById(id);
     }
 }

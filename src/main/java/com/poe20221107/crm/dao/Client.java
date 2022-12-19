@@ -1,5 +1,6 @@
 package com.poe20221107.crm.dao;
 
+import com.poe20221107.crm.business.ClientState;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,13 +30,12 @@ public class Client {
     private String zipCode;
     private String city;
     private String country;
-    private Integer state; // TODO: créer un Enum au lieu d'utiliser un Integer
-
+    private ClientState state;
     
     public Client() {
     }
     
-    public Client(String companyName, String firstName, String lastName, String email, String phone, String address, String zipCode, String city, String country, Integer state) {
+    public Client(String companyName, String firstName, String lastName, String email, String phone, String address, String zipCode, String city, String country, ClientState state) {
         this.companyName = companyName;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -132,11 +132,11 @@ public class Client {
         this.country = country;
     }
 
-    public Integer getState() {
+    public ClientState getState() {
         return state;
     }
 
-    public void setState(Integer state) {
+    public void setState(ClientState state) {
         this.state = state;
     }
 
