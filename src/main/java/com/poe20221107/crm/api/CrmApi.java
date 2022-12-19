@@ -4,6 +4,7 @@ import com.poe20221107.crm.dao.Client;
 import com.poe20221107.crm.dao.ClientDAO;
 import java.util.List;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -34,5 +35,11 @@ public class CrmApi {
     @Consumes(MediaType.APPLICATION_JSON)
     public void createClient(Client client){
         ClientDAO.create(client);
+    }
+    
+    @DELETE()
+    @Path("/{id}")
+    public void deleteClient(@PathParam("id") Long id){
+        ClientDAO.deleteById(id);
     }
 }
