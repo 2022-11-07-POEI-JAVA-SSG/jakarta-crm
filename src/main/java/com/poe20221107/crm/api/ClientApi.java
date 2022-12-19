@@ -12,6 +12,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 
 @Path("clients")
@@ -32,11 +33,13 @@ public class ClientApi {
         return ClientDAO.findById(id);
     }
     
-    
     @POST()
     @Consumes(MediaType.APPLICATION_JSON)
-    public void createClient(Client client){
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response createClient(Client client){
         ClientDAO.create(client);
+        // retourner status code HTTP : 201 
+        return Response.status(Response.Status.CREATED).entity(client).build();
     }
     
     @DELETE()
@@ -48,9 +51,13 @@ public class ClientApi {
     @PUT()
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public void updateClient(Client client, @PathParam("id") Long id){
-        // TODO : vérifier si id dans URL est identique à id dans body
-        
-        ClientDAO.update(client);
+    public Response updateClient(Client client, @PathParam("id") Integer id){
+       if(id.equals(client.getId())){        
+            ClientDAO.update(client);
+            return Response.ok().build();
+       } else {
+           // retourner status code HTTP : 400           
+           return Response.status(Response.Status.BAD_REQUEST).build();
+       }
     }
 }
