@@ -34,26 +34,26 @@ public class OrderApi {
         return OrderDAO.findById(id);
     }
     
-   /* 
+   
     @POST()
     @Consumes(MediaType.APPLICATION_JSON)
-    public void createClient(Client client){
-        ClientDAO.create(client);
+    public void createOrdert(Order order){
+        OrderDAO.create(order);
     }
-    
+    /*
     @DELETE()
     @Path("/{id}")
     public void deleteClient(@PathParam("id") Long id){
         ClientDAO.deleteById(id);
     }
-    
+*/    
     @PUT()
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public void updateClient(Client client, @PathParam("id") Long id){
+    public void updateOrder(Order order, @PathParam("id") Long id){
         // TODO : vérifier si id dans URL est identique à id dans body
         
-        ClientDAO.update(client);
+        OrderDAO.update(order);
     }
-*/
+
 }
