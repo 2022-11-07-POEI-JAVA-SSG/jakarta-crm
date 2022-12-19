@@ -13,8 +13,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+
 @Path("clients")
-public class CrmApi {
+public class ClientApi {
     
     @GET()
     @Produces(MediaType.APPLICATION_JSON)
