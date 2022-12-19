@@ -40,13 +40,13 @@ public class OrderApi {
     public void createOrdert(Order order){
         OrderDAO.create(order);
     }
-    /*
+    
     @DELETE()
     @Path("/{id}")
     public void deleteClient(@PathParam("id") Long id){
-        ClientDAO.deleteById(id);
+        OrderDAO.deleteById(id);
     }
-*/    
+    
     @PUT()
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
