@@ -21,6 +21,7 @@ RESPONSE:
 REQUETE:
 
 ![](README_files/clients_POST.png)
+
 ![](README_files/clients_POST_body.png)
 
 REQUETE:
@@ -30,6 +31,7 @@ REQUETE:
 REQUETE:
 
 ![](README_files/clients_PUT.png)
+
 ![](README_files/clients_PUT_body.png)
 
 ---
@@ -55,11 +57,13 @@ RESPONSE:
 REQUETE:
 
 ![](README_files/orders_POST.png)
+
 ![](README_files/orders_POST_body.png)
 
 REQUETE:
 
 ![](README_files/orders_id_PUT.png)
+
 ![](README_files/orders_id_PUT_body.png)
 
 REQUETE:
