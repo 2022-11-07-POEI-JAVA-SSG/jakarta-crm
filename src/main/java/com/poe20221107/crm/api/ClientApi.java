@@ -32,7 +32,7 @@ public class ClientApi {
         
         return ClientDAO.findById(id);
     }
-    
+
     @POST()
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
