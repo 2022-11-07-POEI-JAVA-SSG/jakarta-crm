@@ -14,7 +14,7 @@ public class Client {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer id; // Long : pose problème avec les colonnes : clients._id et orders.client_id
     
     @Column(name="company_name")
     private String companyName;
@@ -47,10 +47,6 @@ public class Client {
         this.state = state;
     }
 
-
-    
-    
-    
     public Integer getId() {
         return id;
     }

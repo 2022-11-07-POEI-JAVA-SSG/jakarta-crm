@@ -28,7 +28,7 @@ public class ClientApi {
     @GET()
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Client getClient(@PathParam("id") Long id){
+    public Client getClient(@PathParam("id") Integer id){
         
         return ClientDAO.findById(id);
     }
@@ -44,7 +44,7 @@ public class ClientApi {
     
     @DELETE()
     @Path("/{id}")
-    public void deleteClient(@PathParam("id") Long id){
+    public void deleteClient(@PathParam("id") Integer id){
         ClientDAO.deleteById(id);
     }
     

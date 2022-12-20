@@ -21,7 +21,7 @@ public class ClientDAO {
         tx.commit();
     }
     
-    public static Client findById(Long id){
+    public static Client findById(Integer id){
         EntityManager entityManager = EntityManagerSingleton.getEntityManager();
         
         return entityManager.find(Client.class, id);
@@ -58,7 +58,7 @@ public class ClientDAO {
         return query.getResultList();
     }
     
-    public static void deleteById(Long id){
+    public static void deleteById(Integer id){
         EntityManager entityManager = EntityManagerSingleton.getEntityManager();
         
         EntityTransaction tx = entityManager.getTransaction();
