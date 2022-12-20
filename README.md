@@ -6,7 +6,7 @@ REQUETE:
 
 ![](README_files/clients_GET.png)
 
-RESPONSE:
+REPONSE:
 
 ![](README_files/clients_GET_response.png)
 
@@ -14,7 +14,7 @@ REQUETE:
 
 ![](README_files/clients_id_GET.png)
 
-RESPONSE:
+REPONSE:
 
 ![](README_files/clients_id_GET_response.png)
 
@@ -42,7 +42,7 @@ REQUETE:
 
 ![](README_files/orders_GET.png)
 
-RESPONSE:
+REPONSE:
 
 ![](README_files/orders_GET_response.png)
 
@@ -50,7 +50,7 @@ REQUETE:
 
 ![](README_files/orders_id_GET.png)
 
-RESPONSE:
+REPONSE:
 
 ![](README_files/orders_id_GET_response.png)
 
