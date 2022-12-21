@@ -1,0 +1,23 @@
+﻿CREATE TABLE IF NOT EXISTS clients(
+ id SERIAL PRIMARY KEY,
+ company_name VARCHAR(50) NOT NULL,
+ first_name VARCHAR(50) NOT NULL,
+ last_name VARCHAR(50) NOT NULL,
+ email VARCHAR(50) NOT NULL UNIQUE,
+ phone VARCHAR(10) NOT NULL UNIQUE,
+  address VARCHAR(100) NOT NULL,
+  zip_code VARCHAR(30) NOT NULL,
+ city VARCHAR(30) NOT NULL,
+ country VARCHAR(30) NOT NULL,
+ state INT
+);
+
+ CREATE TABLE IF NOT EXISTS orders(
+ id SERIAL PRIMARY KEY,
+ type_presta VARCHAR(30) NOT NULL,
+  designation VARCHAR(50) NOT NULL,
+ client_id INT NOT NULL REFERENCES clients(id) ON DELETE CASCADE,
+ nb_days INT,
+ unitPrice INT,
+ state INT
+ );
